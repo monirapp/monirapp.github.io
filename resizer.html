@@ -703,8 +703,8 @@ header.material-io-nav .nav-background.material-io-nav {
 
 .container.material-io-nav {
   -webkit-flex-direction: row;
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
   display: -webkit-flex;
   height: 100%;
   position: relative;
@@ -950,37 +950,12 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 </style>
     <meta charset="utf-8">
     <title>Resizer - Material Design</title>
-    <meta name="description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
-
-    <!-- Schema.org markup -->
-    <meta itemprop="name" content="Resizer - Material Design">
-    <meta itemprop="description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
-    <meta itemprop="image" content="https://material.io/resizer/static/images/resizer-share.png">
-
-    <!-- Open Graph markup -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Resizer - Material Design">
-    <meta property="og:image" content="https://material.io/resizer/static/images/resizer-share.png">
-    <meta property="og:description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
-    <meta property="og:site_name" content="Resizer - Material Design">
-    <meta property="og:url" content="http://material.io/resizer/">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@googledesign">
-    <meta name="twitter:title" content="Resizer - Material Design">
-    <meta name="twitter:description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
-    <meta name="twitter:image" content="https://material.io/resizer/static/images/resizer-share.png">
-
-    <link rel="icon" sizes="192x192" href="static/images/resizer-192x192.png">
-    <link rel="shortcut icon" href="static/images/resizer-72x72.png">
-    <link rel="apple-touch-icon" href="static/images/resizer-72x72.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="static/images/resizer-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="static/images/resizer-144x144.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/images/resizer-180x180.png">
-
     <style>body { margin: 0; overflow: hidden; }</style>
 
+    <script src="static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="components.html">
+    
+  </head>
   <body>
     <!-- Google Tag Manager -->
     <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
@@ -991,11 +966,32 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NHRPF8');</script>
     <!-- End Google Tag Manager -->
+    <material-io-nav property="resizer" theme="light" graphic-right="" snap="" class="x-scope material-io-nav-0 nav-collapsed">
+    <iron-media-query query="(min-width: 767px) and (max-width: 1200px)" class="style-scope material-io-nav" style="display: none;"></iron-media-query>
+    <iron-media-query query="(min-width: 360px) and (max-width: 767px)" class="style-scope material-io-nav" style="display: none;"></iron-media-query>
+    <iron-media-query query="(min-width: 767px) and (max-width: 900px)" query-matches="{{small-desktop}}" class="style-scope material-io-nav" style="display: none;"></iron-media-query>
+    <iron-media-query query="(max-width: 359px)" query-matches="{{tiny-mobile}}" class="style-scope material-io-nav" style="display: none;"></iron-media-query>
+    <iron-media-query query="(max-width: 840px)" class="style-scope material-io-nav" style="display: none;"></iron-media-query>
+
     
+
+    <div class="container style-scope material-io-nav" tiny-mobile$="{{tiny-mobile}}" small-desktop$="{{small-desktop}}">
+      <div class="content-container style-scope material-io-nav">
+        <div class="copy style-scope material-io-nav">
+          <h3 class="style-scope material-io-nav">Resizer</h3>
+          <p class="style-scope material-io-nav">An interactive viewer that helps designers test material design breakpoints across desktop, mobile, and tablet.</p>
+        </div>
+      </div>
+      <div class="graphic-container style-scope material-io-nav">
+        <div class="graphic resizer style-scope material-io-nav"></div>
+      </div>
+    </div>
+    <div class="overlay style-scope material-io-nav hidden"></div>
+  </material-io-nav>
     <script>
     window.addEventListener('WebComponentsReady', function(e) {
       var resizer = new DeviceResizer({
-        defaultURL: 'hhttp://monirapp.com/33.html',
+        defaultURL: 'https://material.io/guidelines/',
         defaultWindowWidth: 840,
         defaultHandsetWidth: 360,
         deviceProfiles: [
@@ -1110,4 +1106,4 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
   
 
-<device-resizer>  <div id="device-container" class="style-scope device-resizer"> <div class="device-list style-scope device-resizer" view="handset">   <device-view id="handset" device="handset" aspect="16x9" class="style-scope device-resizer" device-width="360" style="width: 360px; height: 640px;"> <div class="frame-container style-scope device-view"> <iframe id="frame-content" sandbox="allow-scripts allow-same-origin" class="style-scope device-view" src="http://monirapp.com/33.html"></iframe> </div> </device-view> </div> </div>   </device-resizer></body></html>
+<device-resizer>  <div id="device-container" class="style-scope device-resizer"> <div class="device-list style-scope device-resizer" view="all"> <device-view id="window" device="window" class="style-scope device-resizer" device-width="840" style="" disable-sizing=""> <div class="frame-container style-scope device-view"> <iframe id="frame-content" sandbox="allow-scripts allow-same-origin" class="style-scope device-view" src="https://material-adaptive.firebaseapp.com/pesto/app/dist.html"></iframe> </div> </device-view>  <device-view id="handset" device="handset" aspect="16x9" class="style-scope device-resizer" device-width="360" style="" disable-sizing=""> <div class="frame-container style-scope device-view"> <iframe id="frame-content" sandbox="allow-scripts allow-same-origin" class="style-scope device-view" src="https://material-adaptive.firebaseapp.com/pesto/app/dist.html"></iframe> </div> </device-view> </div> </div> <div id="device-overlay" class="style-scope device-resizer"> </div>  </device-resizer></body></html>
