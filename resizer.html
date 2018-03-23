@@ -1,0 +1,1116 @@
+<html class="mdl-js"><head><style scope="iron-icon">iron-icon {
+  position:relative;vertical-align:middle;
+}</style><style scope="iron-icon-0">iron-icon.iron-icon-0 {
+  display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;
+fill:currentcolor;
+stroke:none;
+width:24px;
+height:24px;;
+}</style><style scope="iron-a11y-announcer">iron-a11y-announcer {
+  display:inline-block;position:fixed;clip:rect(0,0,0,0)
+}</style><style scope="paper-input-char-counter">paper-input-char-counter {
+  display:inline-block;float:right;
+}
+
+paper-input-char-counter[hidden] {
+  display:none!important
+}
+
+[dir=rtl] paper-input-char-counter, paper-input-char-counter[dir=rtl] {
+  float:left
+}</style><style scope="paper-input-container">paper-input-container {
+  display:block;padding:8px 0;
+}
+
+paper-input-container[inline] {
+  display:inline-block
+}
+
+paper-input-container[disabled] {
+  pointer-events:none;opacity:.33;
+}
+
+paper-input-container[hidden] {
+  display:none!important
+}
+
+.underline.paper-input-container {
+  height:2px;position:relative
+}
+
+.focused-line.paper-input-container {
+  -webkit-transform-origin:center center;transform-origin:center center;-webkit-transform:scale3d(0,1,1);transform:scale3d(0,1,1);
+}
+
+.underline.is-highlighted.paper-input-container .focused-line.paper-input-container {
+  -webkit-transform:none;transform:none;-webkit-transition:-webkit-transform .25s;transition:transform .25s;
+}
+
+.underline.is-invalid.paper-input-container .focused-line.paper-input-container {
+  -webkit-transform:none;transform:none;-webkit-transition:-webkit-transform .25s;transition:transform .25s;
+}
+
+paper-input-container[disabled] .unfocused-line.paper-input-container {
+  border-bottom:1px dashed;
+}
+
+.label-and-input-container.paper-input-container {
+  width:100%;max-width:100%
+}
+
+.input-content.paper-input-container {
+  position:relative
+}
+
+.input-content.paper-input-container  .paper-input-label,.input-content.paper-input-container  label {
+  position:absolute;top:0;right:0;left:0;width:100%;font:inherit;-webkit-transition:-webkit-transform .25s,width .25s;transition:transform .25s,width .25s;-webkit-transform-origin:left top;transform-origin:left top;
+}
+
+.input-content.label-is-floating.paper-input-container  .paper-input-label,.input-content.label-is-floating.paper-input-container  label {
+  -webkit-transform:translateY(-75%) scale(.75);transform:translateY(-75%) scale(.75);width:133%;
+}
+
+[dir=rtl] paper-input-container .input-content.label-is-floating.paper-input-container  .paper-input-label, paper-input-container[dir=rtl] .input-content.label-is-floating.paper-input-container  .paper-input-label,[dir=rtl] paper-input-container .input-content.label-is-floating.paper-input-container  label, paper-input-container[dir=rtl] .input-content.label-is-floating.paper-input-container  label {
+  width:100%;-webkit-transform-origin:right top;transform-origin:right top
+}
+
+.input-content.label-is-hidden.paper-input-container  .paper-input-label,.input-content.label-is-hidden.paper-input-container  label {
+  visibility:hidden
+}
+
+.input-content.paper-input-container  .paper-input-input,.input-content.paper-input-container  input,.input-content.paper-input-container  iron-autogrow-textarea,.input-content.paper-input-container  textarea {
+  position:relative;outline:0;box-shadow:none;padding:0;width:100%;max-width:100%;background:0 0;border:none;-webkit-appearance:none;text-align:inherit;vertical-align:bottom;
+}
+
+.input-content.paper-input-container  input {
+  min-width:0
+}
+
+.input-content.paper-input-container  textarea {
+  resize:none
+}
+
+.add-on-content.paper-input-container {
+  position:relative
+}</style><style scope="paper-input-error">paper-input-error {
+  display:inline-block;visibility:hidden;position:absolute;left:0;right:0
+}
+
+paper-input-error[invalid] {
+  visibility:visible
+}</style><style scope="paper-input">paper-input {
+  display:block
+}
+
+paper-input[focused] {
+  outline:0
+}
+
+paper-input[hidden] {
+  display:none!important
+}
+
+label.paper-input {
+  pointer-events:none
+}</style><style scope="paper-ripple">paper-ripple {
+  display:block;position:absolute;border-radius:inherit;overflow:hidden;top:0;left:0;right:0;bottom:0;pointer-events:none
+}
+
+paper-ripple[animating] {
+  -webkit-transform:translate(0,0);transform:translate3d(0,0,0)
+}
+
+#background.paper-ripple,#waves.paper-ripple,.wave.paper-ripple,.wave-container.paper-ripple {
+  pointer-events:none;position:absolute;top:0;left:0;width:100%;height:100%
+}
+
+#background.paper-ripple,.wave.paper-ripple {
+  opacity:0
+}
+
+#waves.paper-ripple,.wave.paper-ripple {
+  overflow:hidden
+}
+
+.wave.paper-ripple,.wave-container.paper-ripple {
+  border-radius:50%
+}
+
+paper-ripple.circle #background.paper-ripple,paper-ripple.circle #waves.paper-ripple {
+  border-radius:50%
+}
+
+paper-ripple.circle .wave-container.paper-ripple {
+  overflow:hidden
+}</style><style scope="paper-toggle-button">.toggle-bar.paper-toggle-button,.toggle-ink.paper-toggle-button,.toggle-label.paper-toggle-button {
+  pointer-events:none
+}
+
+paper-toggle-button {
+  display:inline-block;
+}
+
+paper-toggle-button[disabled] {
+  pointer-events:none
+}
+
+paper-toggle-button:focus {
+  outline:0
+}
+
+.toggle-bar.paper-toggle-button {
+  position:absolute;height:100%;width:100%;border-radius:8px;opacity:.4;transition:background-color linear .08s;
+}
+
+.toggle-button.paper-toggle-button {
+  position:absolute;top:-3px;left:0;height:20px;width:20px;border-radius:50%;box-shadow:0 1px 5px 0 rgba(0,0,0,.6);transition:-webkit-transform linear .08s,background-color linear .08s;transition:transform linear .08s,background-color linear .08s;will-change:transform;
+}
+
+.toggle-button.dragging.paper-toggle-button {
+  -webkit-transition:none;transition:none
+}
+
+paper-toggle-button[checked]:not([disabled]) .toggle-bar.paper-toggle-button {
+  opacity:.5;
+}
+
+paper-toggle-button[disabled] .toggle-bar.paper-toggle-button {
+  background-color:#000;opacity:.12
+}
+
+paper-toggle-button[checked] .toggle-button.paper-toggle-button {
+  -webkit-transform:translate(16px,0);transform:translate(16px,0)
+}
+
+paper-toggle-button[disabled] .toggle-button.paper-toggle-button {
+  background-color:#bdbdbd;opacity:1
+}
+
+.toggle-ink.paper-toggle-button {
+  position:absolute;top:-14px;left:-14px;right:auto;bottom:auto;width:48px;height:48px;opacity:.5;
+}
+
+.toggle-container.paper-toggle-button,.toggle-label.paper-toggle-button {
+  position:relative;display:inline-block
+}
+
+.toggle-container.paper-toggle-button {
+  width:36px;height:14px;margin:4px 1px
+}
+
+.toggle-label.paper-toggle-button {
+  vertical-align:middle;
+}</style><style scope="iron-overlay-backdrop">iron-overlay-backdrop {
+  position:fixed;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity .2s;pointer-events:none;
+}
+
+iron-overlay-backdrop.opened {
+  pointer-events:auto;
+}</style><style scope="paper-dialog">paper-dialog {
+  display:block;margin:24px 40px;
+}
+
+paper-dialog >* {
+  margin-top:20px;padding:0 24px
+}
+
+paper-dialog >.no-padding {
+  padding:0
+}
+
+paper-dialog >:first-child {
+  margin-top:24px
+}
+
+paper-dialog >:last-child {
+  margin-bottom:24px
+}
+
+paper-dialog  h2 {
+  position:relative;margin:0;
+}
+
+paper-dialog  .buttons {
+  position:relative;padding:8px 8px 8px 24px;margin:0;
+}</style><style scope="paper-dialog-0">paper-dialog.paper-dialog-0 {
+  background:#ffffff;
+color:#212121;font-family:Roboto,Noto,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:20px;box-shadow:0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.4);;
+}
+
+paper-dialog.paper-dialog-0  h2 {
+  font-family:Roboto,Noto,sans-serif;-webkit-font-smoothing:antialiased;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:20px;font-weight:500;line-height:28px;;
+}
+
+paper-dialog.paper-dialog-0  .buttons {
+  color:#3f51b5;display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;
+}</style><style scope="paper-button">paper-button {
+  display:block;position:relative
+}
+
+paper-button {
+  position:relative;box-sizing:border-box;min-width:5.14em;margin:0 .29em;background:0 0;-webkit-tap-highlight-color:transparent;font:inherit;text-transform:uppercase;outline-width:0;border-radius:3px;-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;user-select:none;cursor:pointer;z-index:0;padding:.7em .57em;
+}
+
+paper-button[hidden] {
+  display:none!important
+}
+
+paper-button[raised].keyboard-focus {
+  font-weight:700;
+}
+
+paper-button:not([raised]).keyboard-focus {
+  font-weight:700;
+}
+
+paper-button[disabled] {
+  background:#eaeaea;color:#a8a8a8;cursor:auto;pointer-events:none;
+}</style><style scope="paper-button-0">paper-button.paper-button-0[elevation="1"] {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+}
+
+paper-button.paper-button-0[elevation="2"] {
+  box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.4);
+}
+
+paper-button.paper-button-0[elevation="3"] {
+  box-shadow:0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.4);
+}
+
+paper-button.paper-button-0[elevation="4"] {
+  box-shadow:0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.4);
+}
+
+paper-button.paper-button-0[elevation="5"] {
+  box-shadow:0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.4);
+}
+
+paper-button.paper-button-0 {
+  display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;font-family:Roboto,Noto,sans-serif;-webkit-font-smoothing:antialiased;;
+}
+
+paper-button.paper-button-0[raised].keyboard-focus {
+  ;
+}
+
+paper-button.paper-button-0:not([raised]).keyboard-focus {
+  ;
+}
+
+paper-button.paper-button-0[disabled] {
+  ;
+}
+
+paper-button.paper-button-0[animated] {
+  transition:box-shadow .28s cubic-bezier(.4,0,.2,1);
+}</style><style scope="device-view">device-view {
+  display:block;position:relative
+}
+
+.frame-container.device-view {
+  bottom:0;left:0;position:absolute;right:0;top:0;overflow:hidden
+}
+
+iframe.device-view {
+  background:#fff;border:none;height:100%;position:absolute;width:100%
+}
+
+device-view[device=handset] {
+  border-color:#999;border-radius:36px;border-style:solid;border-width:60px 16px
+}
+
+device-view[device=handset][landscape] {
+  border-width:16px 60px
+}
+
+device-view[device=tablet] {
+  border-color:#757575;border-radius:36px;border-style:solid;border-width:60px 16px
+}
+
+device-view[device=tablet][landscape] {
+  border-width:16px 60px
+}
+
+device-view[device=window][disable-sizing] {
+  border-color:#666;border-radius:6px;border-style:solid;border-width:24px 24px 80px
+}
+
+device-view[device=window][disable-sizing]:after {
+  background:#666;border-bottom-left-radius:12px;border-bottom-right-radius:12px;bottom:-56px;content:"";display:block;height:56px;left:-140px;margin:-24px;position:absolute;right:-140px
+}</style><style scope="device-resizer">#suggested-sites.device-resizer,#toolbar-container.device-resizer {
+  box-shadow:0 0 2px rgba(0,0,0,.2);z-index:1
+}
+
+#device-overlay.device-resizer,#suggested-sites.device-resizer {
+  right:0;display:none;position:absolute
+}
+
+#product-name.device-resizer,#url-input.device-resizer {
+  font-family:Roboto,sans-serif
+}
+
+iron-selector.device-resizer {
+  cursor:pointer
+}
+
+device-resizer {
+  font-family:Roboto,sans-serif;font-size:14px;line-height:24px;padding:0;margin:0;color:#444;background:#f9f9f9;position:relative;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;overflow:hidden;height:100vh
+}
+
+#toolbar-container.device-resizer {
+  width:100%;background:#fff;position:relative
+}
+
+#toolbar-container.device-resizer .grid-wrapper.device-resizer {
+  width:100%;margin:0 auto;display:flex;justify-content:space-between;padding:8px 20px;box-sizing:border-box;position:relative
+}
+
+#product-name.device-resizer {
+  font-size:20px;font-weight:400;color:#212121;line-height:48px;width:150px;display:inline-block;cursor:pointer;height:48px
+}
+
+@media screen and (max-width:840px) {
+#toolbar-container.device-resizer {
+  min-height:127px
+}
+
+#toolbar-container.device-resizer .grid-wrapper.device-resizer {
+  padding-bottom:55px
+}
+
+#product-name.device-resizer {
+  width:auto
+}
+
+}
+
+#suggested-sites.device-resizer {
+  left:0;top:64px;background-color:#fff;line-height:32px;font-size:14px;color:#212121;width:408px;margin:0 auto;padding:8px 0
+}
+
+#toolbar-container[open].device-resizer #suggested-sites.device-resizer {
+  display:block
+}
+
+#toolbar-container[open].device-resizer {
+  box-shadow:0 0 2px rgba(0,0,0,.4),0 0 1px 2px rgba(0,0,0,.2)
+}
+
+.suggested-site.device-resizer {
+  font-weight:400;padding:4px 16px;color:#757575
+}
+
+.suggested-site.iron-selected.device-resizer {
+  background:#eee
+}
+
+.suggested-site.device-resizer iron-icon.device-resizer {
+  margin:0 12px 0 -4px
+}
+
+#device-overlay.device-resizer {
+  left:0;bottom:0;top:0
+}
+
+#device-overlay[show].device-resizer {
+  display:block;z-index:0
+}
+
+#url-input-container.device-resizer {
+  width:408px;height:36px;cursor:pointer;margin-top:6px;background:#eee;border-radius:2px;padding:6px 6px 6px 12px;box-sizing:border-box;display:flex
+}
+
+@media screen and (max-width:840px) {
+#suggested-sites.device-resizer {
+  top:111px
+}
+
+#url-input-container.device-resizer {
+  position:absolute;width:auto;bottom:15px;left:20px;right:20px;margin:0 auto
+}
+
+}
+
+#url-input.device-resizer {
+  background:0 0;border:none;flex-grow:1;font-size:16px;outline:0;padding-left:12px
+}
+
+#label-size.device-resizer {
+  position:absolute;left:50%;width:200px;margin-left:-100px;line-height:15px;text-align:center;pointer-events:none;font-size:11px;font-weight:500;color:#212121
+}
+
+#label-size.device-resizer::first-letter {
+  text-transform:uppercase
+}
+
+#size-selector-topbar.device-resizer {
+  color:#212121;height:15px;white-space:nowrap;font-weight:500;border-top:1px solid #ddd;border-bottom:1px solid #ddd;background:#FFF;position:relative
+}
+
+#size-selector.device-resizer {
+  position:absolute;left:-100px;right:-100px
+}
+
+#size-selector.device-resizer .item.device-resizer {
+  box-sizing:border-box;border-left:1px solid #ddd;border-right:1px solid #ddd;color:#fff;cursor:pointer;font-size:10px;font-weight:500;height:15px;left:0;line-height:16px;margin-left:auto;margin-right:auto;position:absolute;right:0
+}
+
+#size-selector.device-resizer .item.device-resizer:hover {
+  background:rgba(0,0,0,.1)
+}
+
+#size-selector.device-resizer .item.iron-selected.device-resizer {
+  background:#eee
+}
+
+#size-selector.device-resizer .item.iron-selected.device-resizer .px.device-resizer {
+  color:#212121
+}
+
+#size-selector.device-resizer .item.device-resizer .px.device-resizer {
+  margin-right:4px;margin-left:4px;color:rgba(0,0,0,.54)
+}
+
+#size-selector.device-resizer .px.right.device-resizer {
+  float:right
+}
+
+#size-selector.device-resizer .px.left.device-resizer {
+  float:left
+}
+
+.device-select.device-resizer {
+  color:rgba(0,0,0,.4)
+}
+
+.device-select.device-resizer iron-icon.device-resizer {
+  display:inline-block;margin:12px
+}
+
+.device-select.device-resizer .tab.iron-selected.device-resizer {
+  color:rgba(0,0,0,.8)
+}
+
+.device-select.device-resizer .tab.device-resizer {
+  display:inline-block
+}
+
+.device-list.device-resizer device-view.device-resizer {
+  display:none
+}
+
+.device-list[view=window].device-resizer {
+  position:absolute;top:0;left:0;right:0;bottom:0;display:flex;justify-content:center
+}
+
+.device-list[view=window].device-resizer #window.device-resizer {
+  display:block
+}
+
+.device-list[view=window].device-resizer #window.device-resizer:before {
+  margin:0 -1px;border-radius:0;background:#ddd
+}
+
+.device-list[view=window].device-resizer #window.device-resizer:after {
+  display:none
+}
+
+.device-list[view=handset].device-resizer {
+  margin:auto
+}
+
+.device-list[view=handset].device-resizer #handset.device-resizer {
+  display:block;margin:40px
+}
+
+#device-container.device-resizer {
+  display:flex;align-items:center;flex-grow:1;overflow:auto;position:relative
+}
+
+.device-list[view=all].device-resizer {
+  box-sizing:border-box;display:block;height:calc(904px * .5);margin:0 auto;max-width:1400px;position:relative;width:100%
+}
+
+.device-list[view=all].device-resizer device-view.device-resizer {
+  -webkit-transform:scale(.5);transform:scale(.5);display:block;bottom:0
+}
+
+.device-list[view=all].device-resizer #window.device-resizer {
+  width:1366px;height:800px;margin-left:10%;-webkit-transform-origin:top left;transform-origin:top left;position:static
+}
+
+.device-list[view=all].device-resizer #tablet.device-resizer {
+  width:1024px;height:768px;right:17%;-webkit-transform-origin:bottom right;transform-origin:bottom right;position:absolute
+}
+
+.device-list[view=all].device-resizer #handset.device-resizer {
+  height:640px;width:360px;right:5%;-webkit-transform-origin:bottom right;transform-origin:bottom right;position:absolute
+}
+
+@media screen and (min-width:1440px) and (min-height:850px) {
+.device-list[view=all].device-resizer {
+  height:calc(904px * .75);max-width:1700px
+}
+
+.device-list[view=all].device-resizer device-view.device-resizer {
+  -webkit-transform:scale(.75);transform:scale(.75)
+}
+
+}
+
+@media screen and (max-width:1024px),screen and (max-height:550px) {
+.device-list[view=all].device-resizer {
+  height:calc(904px * .35);max-width:980px
+}
+
+.device-list[view=all].device-resizer device-view.device-resizer {
+  -webkit-transform:scale(.35);transform:scale(.35)
+}
+
+}
+
+@media screen and (max-width:720px),screen and (max-height:420px) {
+.device-list[view=all].device-resizer {
+  height:calc(904px * .18);max-width:500px
+}
+
+.device-list[view=all].device-resizer device-view.device-resizer {
+  -webkit-transform:scale(.18);transform:scale(.18)
+}
+
+}
+
+#content-alert.device-resizer {
+  max-width:540px
+}</style><style scope="material-io-nav">material-io-nav {
+  box-sizing: border-box;
+  border-bottom: 1px solid #E0E0E0;
+  display: block;
+  font-family: "Roboto Mono", monospace;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+
+material-io-nav.nav-collapsed {
+  border-width: 0px;
+  height: 0px;
+}
+
+material-io-nav[theme='light'] {
+  background: #FFF;
+}
+
+material-io-nav[theme='dark'] {
+  background: #212121;
+}
+
+material-io-nav[theme='light'] .copy.material-io-nav {
+  color: #000;
+}
+
+material-io-nav[theme='dark'] .copy.material-io-nav {
+  color: rgba(255,255,255,0.87);
+}
+
+material-io-nav[theme='light'] .material-link.material-io-nav ._text.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/material_wordmark-dark.svg');
+}
+
+material-io-nav[theme='dark'][property='resizer'] .icon.material-io-nav, material-io-nav[theme='dark'][property='resizer'] .graphic.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/resizer_light.svg');
+}
+
+material-io-nav[theme='dark'][property='icons'] .icon.material-io-nav , material-io-nav[theme='dark'][property='icons'] .graphic.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/icons_light.svg');
+}
+
+material-io-nav[theme='dark'][property='devices'] .icon.material-io-nav, material-io-nav[theme='dark'][property='devices'] .graphic.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/devices_light.svg');
+}
+
+material-io-nav[theme='light'][property='resizer'] .icon.material-io-nav, material-io-nav[theme='light'][property='resizer'] .graphic.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/resizer_dark.svg');
+}
+
+material-io-nav[theme='light'][property='icons'] .icon.material-io-nav , material-io-nav[theme='light'][property='icons'] .graphic.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/icons_dark.svg');
+}
+
+material-io-nav[theme='light'][property='devices'] .icon.material-io-nav, material-io-nav[theme='light'][property='devices'] .graphic.material-io-nav {
+  background-image: url('https://material.io/resizer/static/material-io-nav/static/images/devices_dark.svg');
+}
+
+material-io-nav[full-nav] header.material-io-nav {
+  width: 100%;
+}
+
+material-io-nav[snap] {
+  overflow: visible;
+}
+
+header.material-io-nav {
+  position: fixed;
+  transition: background-color 0.1s ease-in-out;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  width: 150px;
+}
+
+header.material-io-nav .nav-background.material-io-nav {
+  height:100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.brand-wrapper.material-io-nav {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: top 0.1s ease-in-out;
+  -webkit-transition: top 0.1s ease-in-out;
+}
+
+.brand-wrapper.material-io-nav .brand-carousel.material-io-nav {
+  position: relative;
+  top: 0px;
+}
+
+.material-link.material-io-nav {
+  -webkit-transform: translateY(0);
+  align-items: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding-left: 54px;
+  transform: translateY(0);
+}
+
+.material-link.material-io-nav ._text.material-io-nav {
+  background: url('https://material.io/resizer/static/material-io-nav/static/images/material_wordmark.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 180px auto;
+    margin: 0;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 180px;
+}
+
+.container.material-io-nav {
+  -webkit-flex-direction: row;
+	display: flex;
+	flex-direction: row;
+  display: -webkit-flex;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+material-io-nav[graphic-left] .container.material-io-nav {
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+}
+
+.graphic-container.material-io-nav {
+  height: 320px;
+  margin-left: 64px;
+  width: 50%;
+}
+
+material-io-nav[graphic-left] .graphic-container.material-io-nav {
+  margin-right: 64px;
+}
+
+material-io-nav[graphic-left] .graphic.material-io-nav {
+  background-position: bottom right;
+}
+
+.graphic-container.material-io-nav .graphic.material-io-nav {
+  background-repeat: no-repeat;
+  height: 100%;
+  z-index: 9999;
+}
+
+.content-container.material-io-nav {
+  position: relative;
+  width: 50%;
+}
+
+.content-container.material-io-nav .copy.material-io-nav {
+  padding-top: 139px;
+  position: absolute;
+  text-align: right;
+  width: 360px;
+}
+
+material-io-nav[graphic-right] .content-container.material-io-nav .copy.material-io-nav {
+  right: 0;
+}
+
+material-io-nav[graphic-left] .content-container.material-io-nav .copy.material-io-nav {
+  left: 0;
+  text-align: left;
+}
+
+.content-container.material-io-nav .copy.material-io-nav h3.material-io-nav {
+  font-family: Roboto Mono;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -1.25px;
+  line-height: 53px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.content-container.material-io-nav .copy.material-io-nav p.material-io-nav {
+  font-family: Roboto;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.property-brand.material-io-nav {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+}
+
+.property-brand.material-io-nav .icon.material-io-nav {
+  height: 30px;
+  width: 30px;
+}
+
+.property-brand.material-io-nav div.material-io-nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.property-brand.material-io-nav .brand-name.material-io-nav {
+  font-family: Roboto Mono;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  padding-left: 24px;
+  text-transform: uppercase;
+}
+
+material-io-nav[theme='dark'] .property-brand.material-io-nav .brand-name.material-io-nav {
+  color: rgba(255,255,255,0.87);
+}
+
+.overlay.material-io-nav {
+  background-color: rgb(0,0,0);
+  height: 100vh;
+  left: 0;
+  opacity: 0.5;
+  position: relative;
+  top: 64px;
+  transition: top 0.1s ease-in-out;
+  -webkit-transition: top 0.1s ease-in-out;
+  width: 100%;
+  z-index: 9;
+}
+
+.overlay.hidden.material-io-nav {
+  opacity: 0;
+  z-index: -999;
+}
+
+.overlay[mobilesnap].material-io-nav {
+  top: 197px;
+}
+
+.brand-wrapper[mobile-layout].material-io-nav, .brand-wrapper[tiny-mobile].material-io-nav {
+  -webkit-transform: scale(0.8);
+  left: 16px !important;
+  transform-origin: left;
+  transform: scale(0.8);
+}
+
+material-io-nav[graphic-left] .container[mobile-layout].material-io-nav, material-io-nav[graphic-left] .container[tiny-mobile].material-io-nav {
+  flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+}
+
+material-io-nav[graphic-right] .container[mobile-layout].material-io-nav, material-io-nav[graphic-left] .container[tiny-mobile].material-io-nav {
+  flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+}
+
+.container[mobile-layout].material-io-nav .content-container.material-io-nav, .container[tiny-mobile].material-io-nav .content-container.material-io-nav {
+  width: 100%;
+}
+
+.container[mobile-layout].material-io-nav .content-container.material-io-nav .copy.material-io-nav, .container[tiny-mobile].material-io-nav .content-container.material-io-nav .copy.material-io-nav {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin: 8px 16px 16px;
+  width: auto;
+  padding-top: 0;
+}
+
+.container[tablet].material-io-nav .content-container.material-io-nav .copy.material-io-nav {
+  width: 330px;
+}
+
+.container[mobile-layout].material-io-nav .content-container.material-io-nav .copy.material-io-nav h3.material-io-nav, .container[tiny-mobile].material-io-nav .content-container.material-io-nav .copy.material-io-nav h3.material-io-nav {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+.container[mobile-layout].material-io-nav .content-container.material-io-nav .copy.material-io-nav p.material-io-nav, .container[tiny-mobile].material-io-nav .content-container.material-io-nav .copy.material-io-nav p.material-io-nav {
+  margin: 0;
+}
+
+.container[mobile-layout].material-io-nav .graphic-container.material-io-nav, .container[tiny-mobile].material-io-nav .graphic-container.material-io-nav {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  height: 125px;
+  top: 0;
+}
+
+.container[tiny-mobile].material-io-nav .graphic-container.material-io-nav {
+  height: 100px;
+}
+
+.container[mobile-layout].material-io-nav .graphic.material-io-nav, .container[tiny-mobile].material-io-nav .graphic.material-io-nav {
+  background-position: center;
+}
+
+.container[mobile-layout].material-io-nav, .container[tiny-mobile].material-io-nav {
+  top: 64px !important;
+  height: auto;
+}
+
+material-io-nav[graphic-left] .container[tablet].material-io-nav .graphic-container.material-io-nav {
+  -webkit-transform-origin: bottom;
+  -webkit-transform: scale(0.8);
+  transform-origin: bottom;
+  transform: scale(0.8);
+}</style><style scope="material-io-nav-0">material-io-nav.material-io-nav-0[theme='dark'] .material-link.material-io-nav {
+  background-image:url('https://material.io/resizer/static/material-io-nav/static/images/logo.svg');
+}
+
+material-io-nav.material-io-nav-0[theme='light'] .material-link.material-io-nav {
+  background-image:url('https://material.io/resizer/static/material-io-nav/static/images/material_logo.svg');
+}
+
+.material-io-nav-0 header.material-io-nav {
+  height:60px;
+
+  z-index:100;
+}
+
+.material-io-nav-0 header.material-io-nav .nav-background.material-io-nav {
+  opacity:0;
+}
+
+material-io-nav.material-io-nav-0[theme='dark'] header.material-io-nav .nav-background.material-io-nav {
+  background-color:#212121;
+}
+
+material-io-nav.material-io-nav-0[theme='light'] header.material-io-nav .nav-background.material-io-nav {
+  background-color:#FFFFFF;
+}
+
+.material-io-nav-0 .brand-wrapper.material-io-nav {
+  height:34px;
+
+  left:32px;
+
+  top:16px;
+}
+
+.material-io-nav-0 .brand-wrapper.material-io-nav .brand-carousel.material-io-nav {
+  -webkit-transition:top 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+  transition:top 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.material-io-nav-0 .brand-wrapper.material-io-nav .brand-carousel.reveal-brand.material-io-nav {
+  top:-34px;
+}
+
+.material-io-nav-0 .material-link.material-io-nav {
+  height:34px;
+}
+
+.material-io-nav-0 .container.material-io-nav {
+  top:0px;
+}</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <meta charset="utf-8">
+    <title>Resizer - Material Design</title>
+    <meta name="description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
+
+    <!-- Schema.org markup -->
+    <meta itemprop="name" content="Resizer - Material Design">
+    <meta itemprop="description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
+    <meta itemprop="image" content="https://material.io/resizer/static/images/resizer-share.png">
+
+    <!-- Open Graph markup -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Resizer - Material Design">
+    <meta property="og:image" content="https://material.io/resizer/static/images/resizer-share.png">
+    <meta property="og:description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
+    <meta property="og:site_name" content="Resizer - Material Design">
+    <meta property="og:url" content="http://material.io/resizer/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@googledesign">
+    <meta name="twitter:title" content="Resizer - Material Design">
+    <meta name="twitter:description" content="An interactive viewer to see and test how digital products respond to material design breakpoints across desktop, mobile and tablet.">
+    <meta name="twitter:image" content="https://material.io/resizer/static/images/resizer-share.png">
+
+    <link rel="icon" sizes="192x192" href="static/images/resizer-192x192.png">
+    <link rel="shortcut icon" href="static/images/resizer-72x72.png">
+    <link rel="apple-touch-icon" href="static/images/resizer-72x72.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/images/resizer-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/images/resizer-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/resizer-180x180.png">
+
+    <style>body { margin: 0; overflow: hidden; }</style>
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-NHRPF8"></script><script src="static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="components.html">
+    <script async="" defer="" src="//www.google.com/insights/consumersurveys/async_survey?site=znr647dh46pklceehuqef2fsua"></script>
+  <script type="text/javascript" charset="utf-8" async="" src="https://www.google.com/insights/consumersurveys/gk/static/hats-integration-release.js"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=material.io" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=material.io"></script></head>
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NHRPF8');</script>
+    <!-- End Google Tag Manager -->
+    
+    <script>
+    window.addEventListener('WebComponentsReady', function(e) {
+      var resizer = new DeviceResizer({
+        defaultURL: 'https://material.io/guidelines/',
+        defaultWindowWidth: 840,
+        defaultHandsetWidth: 360,
+        deviceProfiles: [
+          {
+            device: 'window',
+            size: 1600
+          },
+          {
+            device: 'window',
+            size: 1440
+          },
+          {
+            device: 'window',
+            size: 1280
+          },
+          {
+            aspect: '4x3',
+            device: 'handset',
+            label: 'tablet',
+            landscape: true,
+            size: 1024
+          },
+          {
+            device: 'window',
+            size: 960
+          },
+          {
+            device: 'window',
+            size: 840
+          },
+          {
+            aspect: '4x3',
+            device: 'handset',
+            label: 'tablet',
+            landscape: false,
+            size: 720,
+          },
+          {
+            device: 'window',
+            size: 600
+          },
+          {
+            aspect: '16x9',
+            device: 'handset',
+            label: 'phone',
+            landscape: true,
+            size: 600
+          },
+          {
+            device: 'window',
+            size: 480
+          },
+          {
+            aspect: '16x9',
+            device: 'handset',
+            label: 'phone',
+            size: 360
+          }
+        ],
+        suggestedSites: [
+          {
+            label: 'Material Design guidelines',
+            url: 'https://material.io/guidelines/'
+          },
+          {
+            label: 'Material Design',
+            url: 'https://material.io/'
+          },
+          {
+            label: 'Google Design',
+            url: 'https://design.google.com/'
+          },
+          {
+            label: 'Android',
+            url: 'https://www.android.com/'
+          },
+          {
+            label: 'Pesto',
+            url: 'https://material-adaptive.firebaseapp.com/pesto/app/dist.html'
+          },
+          {
+            label: 'Shrine',
+            url: 'https://material-adaptive.firebaseapp.com/shrine/app/dist.html'
+          }
+        ],
+        windowBreakpoints: [
+          {
+            label: 'xsmall',
+            size: 480
+          },
+          {
+            label: 'small',
+            size: 600
+          },
+          {
+            label: 'medium',
+            size: 960
+          },
+          {
+            label: 'large',
+            size: 1280
+          },
+          {
+            label: 'xlarge',
+            size: Number.MAX_SAFE_INTEGER
+          }
+        ]
+      });
+      document.body.appendChild(resizer);
+    });
+    </script>
+
+  
+
+<device-resizer>  <div id="device-container" class="style-scope device-resizer"> <div class="device-list style-scope device-resizer" view="handset">   <device-view id="handset" device="handset" aspect="16x9" class="style-scope device-resizer" device-width="360" style="width: 360px; height: 640px;"> <div class="frame-container style-scope device-view"> <iframe id="frame-content" sandbox="allow-scripts allow-same-origin" class="style-scope device-view" src="https://material.io/guidelines/"></iframe> </div> </device-view> </div> </div>   </device-resizer></body></html>
