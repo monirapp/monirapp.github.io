@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+Coming Soon!
+</title>
+    
+
+    <meta name="theme-color" content="#ffffff">
+    
+    <link type="text/css" href="https://orthassets.s3.amazonaws.com/styles/fontawesome5/css/fontawesome-all.979b5aafc838.css" rel="stylesheet">
+    <link type="text/css" href="https://orthassets.s3.amazonaws.com/styles/avexno.83c70701050f.css" rel="stylesheet">
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600" rel="stylesheet">
+
+    
+      <!-- sass - DEBUG FALSE just load through static, potentially through s3 -->
+      <link type="text/css" href="https://orthassets.s3.amazonaws.com/styles/base_unauthenticated.dc0bef24a9c1.css" rel="stylesheet">
+    
+
+    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    
+
+    <div class="container-fluid">
+      <div id="navrow" class="row">
+        <div class="col-md-2">
+          <h2 style="color:white; padding-left:20px; margin-top:0px;">Monir</h2>
+        </div>
+        <div class="col-md-push-4 col-md-6">
+          <div id="navlinks">
+            <a href="mailto:jobs@monirapp.com">Join the team</a>
+            <a href="mailto:hello@monirapp.com">Contact</a>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    
+<!-- landing.html -->
+
+
+<footer class="footer">
+  <div id="footer-container">
+    
+    
+    
+  </div>
+</footer>
+
+<!-- EOF landing.html -->
+
+
+    <div id="address-footer">
+        Brooklyn, NY</div>
+
+    <video id="background-video" class="video" muted="" loop="">
+      <source src="http://monirapp.com/images/background.mp4" type="video/mp4">
+    </video>
+
+    <script type="text/javascript" async="" src="https://static.woopra.com/js/w.js"></script><script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/FAfg4oFb3nSGfQYTxZCwDBL6v7jpNb7v/analytics.min.js"></script><script type="text/javascript" src="https://orthassets.s3.amazonaws.com/js/jquery-1.10.2.min.0bdc04968d2f.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    (function() {
+      var video = document.getElementById("background-video");
+        video.addEventListener("canplay", function() {
+        video.playbackRate = 1;
+        video.play();
+      });
+    })();
+    $("#id_email").focus(function() {
+      $('.control-label').hide();
+      $('.send-button').show();
+    });
+    $("#id_email").focusout(function() {
+      if (!$('#id_email').val()) {
+        $('.control-label').show();
+        $('.send-button').hide();
+      }
+    });
+    </script>
+    
+
+    
+<script>
+$("#login-link").click(function() {
+  $("#login-form-container").show();
+  $("#login-form-container").removeClass("concealed");
+  return false;
+});
+$("video").click(function() {
+  $("#login-form-container").addClass("concealed");
+  return false;
+});
+</script>
+
+  
+
+</body></html>
