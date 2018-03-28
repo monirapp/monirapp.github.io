@@ -31,12 +31,16 @@
             margin: 5px;
             float: left;
         }
+        h3{
+            color: #636F70;
+        }
         .row {
             display: -ms-flexbox; /* IE10 */
             display: flex;
             -ms-flex-wrap: wrap; /* IE10 */
             flex-wrap: wrap;
         }
+
 
         /* Create four equal columns that sits next to each other */
         .column {
@@ -84,46 +88,55 @@
 <body>
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-    <!-- About Section -->
-    <div class="w3-container" id="about" style="padding: 0px">
-        <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>About Monir</b></h2>
-    </div>
+<div class="w3-content" style="max-width:1564px">
 
 
-    <div class="w3-row-padding">
 
-        <h5 style="padding-left: 10px; width: 80%">We believe full-screen tap-through vertical story format is the best way to view, create and share stories on mobile devices. Each story is made up of multiple pages, consisting of videos, images and text. Stories are permanent and can be shared and embedded across sites and apps.<br/><br/>
+
+    <div  style="max-width: 800px; margin-right: auto; margin-left: auto">
+        <!-- About Section -->
+        <div id="about">
+            <h2 style="margin-bottom: 50px"><b style="font-size: 35px">About Monir</b></h2>
+        </div>
+
+        <h5 style="color: #636F70">We believe full-screen tap-through vertical story format is the best way to view, create and share stories on mobile devices. Each story is made up of multiple pages, consisting of videos, images and text. Stories are permanent and can be shared and embedded across sites and apps.<br/><br/>
 
             We are using Google’s open source AMP Story format as Monir’s underlying technology and will be customizing it to make it unique to our platform.<br/><br/>
 
             Our goal is to be the definite place where users can view these stories on a wide range of topics - world news, makeup tutorials, entertainment, food, fitness, DIY and how-to’s, fiction, etc.
   </h5>
     </div>
-    
-    <div class="w3-container" id="mock" style="padding: 0px">
-        <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>MVP Mocks</b></h2>
-    </div>
+    <div style="width: 100%; margin-top: 70px">
 
-    <!-- youtube video -->
-    <iframe width="325" height="578" src="https://www.youtube.com/embed/Ycgv1-bHV3Y?rel=0"  frameborder="0" allowfullscreen></iframe>
+        <div style="max-width: 800px; margin-right: auto; margin-left: auto">
 
-
-    <!-- Story examples Section -->
-
-    <div class="w3-container" id="stories" style="padding: 0px">
-        <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>Sample Stories</b></h2>
+            <div id="mocks">
+                <h2 style="margin-bottom: 50px"><b style="font-size: 35px">MVP Mocks</b></h2>
+            </div>
+        <!-- youtube video -->
+            <iframe width="325" height="578" src="https://www.youtube.com/embed/Ycgv1-bHV3Y?rel=0"  frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
 
+
+<div style="width: 100%; margin-top: 70px">
 
     <!-- Food -->
+    <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
+        <!-- Story examples Section -->
+        <div id="stories">
+            <h2><b style="font-size: 35px">Sample Stories</b></h2>
+        </div>
+    </div>
+
+
     <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
         <div class="column">
             <h3>Food</h3>
         </div>
     </div>
+
     <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
         <div class="column">
             <a href= "http://monirapp.com/UnicornFudgeRecipe.html"><img src="http://monirapp.com/images/unicornCover.jpeg" style="width:100%"></a>
@@ -142,11 +155,6 @@
 
     <!-- Entertainment -->
 
-    <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
-        <div class="column">
-            <h3>Entertainment</h3>
-        </div>
-    </div>
     <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
         <div class="column">
             <a href= "http://monirapp.com/shuffleDance.html"><img src="http://monirapp.com/images/shuffleCover.jpeg" style="width:100%"></a>
@@ -174,15 +182,15 @@
 
     <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
         <div class="column">
-            <a href= "http://monirapp.com/ux.html"><img src="http://monirapp.com/images/uxCover.jpeg" style="width:100%"></a>
-            <a href= "http://monirapp.com/startup.html"><img src="http://monirapp.com/images/startupCover.jpeg" style="width:100%"></a>
+            <a href= "http://monirapp.com/ux.html"><img src="http://monirapp.com/images/uxCover.jpg" style="width:100%"></a>
+            <a href= "http://monirapp.com/startup.html"><img src="http://monirapp.com/images/startupCover.jpg" style="width:100%"></a>
 
         </div>
         <div class="column">
             <a href= "http://monirapp.com/designers.html"><img src="http://monirapp.com/images/designerCover.jpeg" style="width:100%"></a>
         </div>
         <div class="column">
-            <a href= "http://monirapp.com/growth.html"><img src="http://monirapp.com/images/growthCover.jpeg" style="width:100%"></a>
+            <a href= "http://monirapp.com/growth.html"><img src="http://monirapp.com/images/growthCover.jpg" style="width:100%"></a>
 
         </div>
     </div>
@@ -406,8 +414,8 @@
         </div>
     </div>
 
-    </div>
 
+</div>
     <!-- End page content -->
 </div>
 
