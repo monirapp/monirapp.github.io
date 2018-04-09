@@ -27,8 +27,16 @@
     <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 
     <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .amp-carousel-button-prev {
+            display: none;
+        }
+        .amp-carousel-button-next {
+            display: none;
+        }
         a{
-            margin: 5px;
             float: left;
         }
         h3{
@@ -74,43 +82,40 @@
 
 <h1 style="text-align: center"><strong>Monir</strong></h1>
 
+<!--<div -->
+    <!--<amp-carousel-->
+            <!--style="max-width: 700px;height: 80px; margin-left: auto; margin-right: auto;"-->
+            <!--type="carousel">-->
+        <!--<img onclick="myFunction('Entertainment')" src="https://cdn2.iconfinder.com/data/icons/male-users-2/512/4-512.png" style="height: 100%; width: auto">-->
+        <!--<img onclick="myFunction('food')" src="https://www.shareicon.net/download/2016/09/02/824429_fork_512x512.png"  style="height: 100%; width: auto">-->
+
+    <!--</amp-carousel>-->
+<div style="max-width: 790px; max-height: 60px; margin-right: auto; margin-left: auto; padding-top: 10px">
+    <amp-carousel
+            id="buttons"
+            style="margin-left: auto; margin-right: auto;"
+            type="carousel">
+
+        <!--<img onclick="myFunction('Entertainment')" src="https://www.shareicon.net/download/2016/09/02/824429_fork_512x512.png"  style="height: 70px; width: auto">-->
+
+
+    </amp-carousel>
+</div>
+
+    <!--<amp-carousel id="buttons"-->
+    <!--style="max-width: 700px;height: 80px; margin-left: auto; margin-right: auto; padding-bottom: 0px"-->
+    <!--type="carousel">-->
+
+    <!--</amp-carousel>-->
+
 <!-- Page content -->
-<div class="w3-content" style="max-width:1564px">
+<div class="w3-content" style="max-width:1564px; padding-top: 30px">
 
 
 
-    <!--<div style="width: 100%; margin-top: 70px">-->
+    <div style="width: 100%; margin-top: 10px">
 
-        <!--<div style="max-width: 800px; margin-right: auto; margin-left: auto">-->
-
-            <!--<div id="mocks">-->
-                <!--<h2 style="margin-bottom: 50px"><b style="font-size: 35px">MVP Mocks</b></h2>-->
-            <!--</div>-->
-            <!--&lt;!&ndash; youtube video &ndash;&gt;-->
-            <!--<iframe width="325" height="578" src="https://www.youtube.com/embed/Ycgv1-bHV3Y?rel=0"  frameborder="0" allowfullscreen></iframe>-->
-        <!--</div>-->
-    <!--</div>-->
-
-
-
-    <div style="width: 100%; margin-top: 50px">
-
-        <!--&lt;!&ndash; Food &ndash;&gt;-->
-        <!--<div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">-->
-            <!--&lt;!&ndash; Story examples Section &ndash;&gt;-->
-            <!--<div id="stories">-->
-                <!--<h2><b style="font-size: 35px">Sample Stories</b></h2>-->
-            <!--</div>-->
-        <!--</div>-->
-
-
-        <!--<div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">-->
-            <!--<div class="column">-->
-                <!--<h3>Food</h3>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
+        <div id="wrapper" class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
             <div class="column">
                 <a href= "http://monirapp.com/UnicornFudgeRecipe.html"><img src="http://monirapp.com/images/unicornCover.jpeg" style="width:100%"></a>
                 <a href= "http://monirapp.com/cakerecipe.html"><img src="http://monirapp.com/images/mCakeCover.jpeg" style="width:100%"></a>
@@ -124,7 +129,7 @@
                 <a href= "http://monirapp.com/kale.html"><img src="http://monirapp.com/images/kaleCover.jpeg" style="width:100%"></a>
                 <a href= "https://www.google.com/url?sa=t&source=web&rct=j&url=https://mashable.com/2018/02/23/reels-weirdest-food-mash-ups.amp&ved=0ahUKEwjIo_Ks24XaAhWjdd8KHWXKD6YQqUMIRg&usg=AOvVaw2kbisi9jM-LG96xGIr4HvI&ampcf=1"><img src="http://monirapp.com/images/mashfoodCover.jpeg" style="width:100%"></a>
             </div>
-        </div>
+
 
         <!-- Entertainment -->
 
@@ -192,11 +197,11 @@
             </div>
         </div>
         <!-- how to  -->
-        <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
-            <div class="column">
-                <h3>How-to</h3>
+            <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
+                <div>
+                    <h3>how to</h3>
+                </div>
             </div>
-        </div>
 
         <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
             <div class="column">
@@ -215,7 +220,7 @@
 
         <!-- Stuff you should know -->
         <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
-            <div class="column">
+            <div>
                 <h3>Things you should know</h3>
             </div>
         </div>
@@ -261,7 +266,7 @@
 
         <!-- Q & A -->
         <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
-            <div class="column">
+            <div>
                 <h3>Q & A</h3>
             </div>
         </div>
@@ -305,7 +310,7 @@
 
         <!-- life hacks -->
         <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
-            <div class="column">
+            <div>
                 <h3>Life Hacks</h3>
             </div>
         </div>
@@ -367,7 +372,7 @@
 
         <!-- make up -->
         <div class="row" style="max-width: 800px; margin-right: auto; margin-left: auto">
-            <div class="column">
+            <div>
                 <h3>Make up</h3>
             </div>
         </div>
@@ -386,11 +391,277 @@
 
             </div>
         </div>
-
+        </div>
+    </div>
 
     </div>
     <!-- End page content -->
 </div>
+
+<script>
+    var stories ={
+        "food":{
+            "logo":"https://www.icon2s.com/wp-content/uploads/2014/06/FoodDrink-catering-icon.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/unicornCover.jpeg",
+                    "link":"http://monirapp.com/UnicornFudgeRecipe.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/pizzaCover.jpeg",
+                    "link":"http://monirapp.com/healthypizza.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/kaleCover.jpeg",
+                    "link":"http://monirapp.com/kale.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/mCakeCover.jpeg",
+                    "link":"http://monirapp.com/cakerecipe.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/kombuchaCover.jpeg",
+                    "link":"https://www.google.com/amp/story/s/mashable.com/2018/02/22/reels-truth-about-kombucha.amp"
+                },
+                {
+                    "cover":"http://monirapp.com/images/mashfoodCover.jpeg",
+                    "link":"https://www.google.com/url?sa=t&source=web&rct=j&url=https://mashable.com/2018/02/23/reels-weirdest-food-mash-ups.amp&ved=0ahUKEwjIo_Ks24XaAhWjdd8KHWXKD6YQqUMIRg&usg=AOvVaw2kbisi9jM-LG96xGIr4HvI&ampcf=1"
+                }
+            ]
+        },
+        "Entertainment":{
+            "logo":"https://www.shareicon.net/download/2017/04/06/882884_circus_512x512.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/shuffleCover.jpeg",
+                    "link":"http://monirapp.com/shuffleDance.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/prankCover.jpeg",
+                    "link":"http://monirapp.com/HandHoldingPrank.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/parkourCover.jpeg",
+                    "link":"http://monirapp.com/MusicallyParkour.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/chachaCover.jpeg",
+                    "link":"http://monirapp.com/ChaChaSlide.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/sandcCover.jpeg",
+                    "link":"https://www.cosmopolitan.com/stamp/more-sex-city-surprising/"
+                },
+                {
+                    "cover":"http://monirapp.com/images/mArtCover.jpeg",
+                    "link":"http://monirapp.com/MusicallyArt.html"
+                }
+            ]
+        },
+        "tech":{
+            "logo":"https://cdn4.iconfinder.com/data/icons/stash/128/computer-chip-512.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/uxCover.jpg",
+                    "link":"http://monirapp.com/ux.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/designerCover.jpeg",
+                    "link":"http://monirapp.com/designers.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/growthCover.jpg",
+                    "link":"http://monirapp.com/growth.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/startupCover.jpg",
+                    "link":"http://monirapp.com/startup.html"
+                }
+            ]
+        },
+        "howto":{
+            "logo":"https://housing.umn.edu/sites/housing.umn.edu/files/hammer_icon-01.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/bulletjournalCover.jpeg",
+                    "link":"http://monirapp.com/bullet_journaling.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/cryptoCover.jpeg",
+                    "link":"http://monirapp.com/cryptowallet.html"
+                }
+            ]
+        },
+        "informative":{
+            "logo":"https://www.hreasily.com/sites/default/files/slide/Aug-2015/statistic%20loop.gif",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/badassCover.jpeg",
+                    "link":"http://monirapp.com/badass_women.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/melindaCover.jpeg",
+                    "link":"http://monirapp.com/gates.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/streetartCover.jpeg",
+                    "link":"http://monirapp.com/streetart.html"
+                }
+            ]
+        },
+        "photography":{
+            "logo":"https://static.wixstatic.com/media/ba3ce6_615e8277a9fb463bb7c268d307f6a3b6~mv2.gif",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/droneCover.jpeg",
+                    "link":"http://monirapp.com/dronephoto.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/spaceCover.jpeg",
+                    "link":"https://www.wired.com/amp-stories/space-photos-cassini-cruise/"
+                }
+                ,
+                {
+                    "cover":"http://monirapp.com/images/egghouseCover.jpeg",
+                    "link":"http://monirapp.com/egghouse.html"
+                }
+            ]
+        },
+        "reviews":{
+            "logo":"https://www.shareicon.net/download/2016/07/11/794345_message_512x512.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/herCover.jpeg",
+                    "link":"http://monirapp.com/hermoviereview.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/suitcaseCover.jpeg",
+                    "link":"https://www.wired.com/amp-stories/gear-away-suitcase/"
+                }
+            ]
+        },
+        "celebrity":{
+            "logo":"http://www.tasveer.com.np/images/service6.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/peoplemagCover.jpeg",
+                    "link":"http://people.com/amp-stories/1519674507347/star-tracks-02/26/2018/"
+                },
+                {
+                    "cover":"http://monirapp.com/images/kylieCover.jpeg",
+                    "link":"http://monirapp.com/KylieJenner.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/galCover.jpeg",
+                    "link":"https://www.cosmopolitan.com/stamp/gal-gadot/   "
+                },
+                {
+                    "cover":"http://monirapp.com/images/annaKCover.jpeg",
+                    "link":"http://monirapp.com/annakendrick.html"
+                }
+            ]
+        },
+        "qa":{
+            "logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbu0YXGvzhEkGw5NFoj4DGiTeoq3FlBrdBGgzFbdSJiLipQQly",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/annakQACover.jpeg",
+                    "link":"http://monirapp.com/annakendrick.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/vsQACover.jpeg",
+                    "link":"http://monirapp.com/victoriascottiqa.html"
+                }
+            ]
+        },
+        "fiction":{
+            "logo":"http://jbjtmarketers.org/wp-content/uploads/2016/07/books.gif",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/mistressCover.jpeg",
+                    "link":"http://monirapp.com/mistressfiction.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/gualichoCover.jpeg",
+                    "link":"http://monirapp.com/gualicho.html"
+                }
+            ]
+        },
+        "lifehack":{
+            "logo":"https://s3.amazonaws.com/uploads.webconnex.com/73/ezgif-1179939329%20%283%29.gif",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/13positiveCover.jpeg",
+                    "link":"http://monirapp.com/13positivethings.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/systemCover.jpeg",
+                    "link":"http://monirapp.com/make_the_system_yours.html"
+                }
+                ,
+                {
+                    "cover":"http://monirapp.com/images/creativeCover.jpeg",
+                    "link":"http://monirapp.com/creativity_at_dawn.html"
+                }
+            ]
+        },
+        "journal":{
+            "logo":"http://jbjtmarketers.org/wp-content/uploads/2016/07/booklet.gif",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/washingtonCover.jpeg",
+                    "link":"http://monirapp.com/Washington.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/33Cover.jpeg",
+                    "link":"http://monirapp.com/33.html"
+                }
+                ,
+                {
+                    "cover":"http://monirapp.com/images/canadaCover.jpeg",
+                    "link":"http://monirapp.com/canada.html"
+                }
+            ]
+        },
+        "makeup":{
+            "logo":"http://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Makeup-icon.png",
+            "items":[
+                {
+                    "cover":"http://monirapp.com/images/dragCover.jpeg",
+                    "link":"http://monirapp.com/dragqueenmakeup.html"
+                },
+                {
+                    "cover":"http://monirapp.com/images/makeupCover.jpeg",
+                    "link":"http://monirapp.com/makeuplook.html"
+                }
+            ]
+        }
+    }
+</script>
+
+<script>
+
+    var buttonContainer = document.getElementById("buttons");
+    var buttons = Object.keys(stories);
+    var str = "";
+    for (i=0; i<buttons.length;i++) {
+        str = "myFunction('"+buttons[i]+"')";
+        buttonContainer.insertAdjacentHTML('beforeend','<img onclick='+str+' src='+stories[buttons[i]].logo+'  style="height: 60px; width: auto">');
+    }
+
+    function myFunction(type) {
+
+        var sItems = stories[type].items;
+
+        var container = document.getElementById("wrapper");
+        document.getElementById("wrapper").innerHTML = "";
+        for (i = 0; i < sItems.length; i++) {
+            container.insertAdjacentHTML('beforeend', '<div class="column">\n' +
+                '                <a href= ' + sItems[i].link + '><img src=' + sItems[i].cover + ' style="width:100%"></a>\n' +
+                '            </div>\n');
+        }
+    }
+</script>
 
 
 <script>
