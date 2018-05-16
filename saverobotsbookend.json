@@ -1,0 +1,23 @@
+{
+  "share-providers": {
+    "twitter": true,
+    "email": true,
+    "facebook": {
+      "app_id": "205484173508686"
+    }
+  },
+  "related-articles": {
+    "Articles": [
+      {
+        "title": "Whats Really Inside Tide Pods",
+        "url": "story.monir.media/tidepod",
+        "image": "https://media.wired.com/photos/5a5e516280b68635912c55f0/191:100/pass/0912WISTWHAT001%20copy.jpg"
+      },
+      {
+        "title": "How Well Do You Know David?",
+        "url": "davidbowieis",
+        "image": "http://thesource.com/wp-content/uploads/2016/11/Bowie.jpg"
+      }
+    ]
+  }
+}
