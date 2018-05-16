@@ -4993,30 +4993,6 @@
         f.hideDeveloperLog = function() {
             ea().development && this.V.hide()
         };
-        var zg = {
-            tag: "div",
-            attrs: q({
-                "class": "i-amphtml-story-unsupported-browser-overlay"
-            }),
-            children: [{
-                tag: "div",
-                attrs: q({
-                    "class": "i-amphtml-overlay-container"
-                }),
-                children: [{
-                    tag: "div",
-                    attrs: q({
-                        "class": "i-amphtml-gear-icon"
-                    })
-                }, {
-                    tag: "div",
-                    attrs: q({
-                        "class": "i-amphtml-story-overlay-text"
-                    }),
-                    localizedStringId: "21"
-                }]
-            }]
-        };
 
         function Ag(a) {
             this.h = a;
