@@ -1,0 +1,23 @@
+{
+  "share-providers": {
+    "twitter": true,
+    "email": true,
+    "facebook": {
+      "app_id": "205484173508686"
+    }
+  },
+  "related-articles": {
+    "Articles": [
+      {
+        "title": "How Well Do You Know David?",
+        "url": "davidbowieis",
+        "image": "http://thesource.com/wp-content/uploads/2016/11/Bowie.jpg"
+      },
+      {
+        "title": "The Hardest Working Photographer",
+        "url": "GettyFoto",
+        "image": "http://story.monir.media/images/GettyPhoto-1.jpg"
+      }
+    ]
+  }
+}
