@@ -1,0 +1,23 @@
+{
+  "share-providers": {
+    "twitter": true,
+    "email": true,
+    "facebook": {
+      "app_id": "205484173508686"
+    }
+  },
+  "related-articles": {
+    "Articles": [
+      {
+        "title": "Whats Really Inside Tide Pods",
+        "url": "story.monir.media/tidepod",
+        "image": "https://media.wired.com/photos/5a5e516280b68635912c55f0/191:100/pass/0912WISTWHAT001%20copy.jpg"
+      },
+      {
+        "title": "The Hardest Working Photographer",
+        "url": "https://en.wikipedia.org/wiki/Cat",
+        "image": "http://story.monir.media/images/GettyPhoto-1.jpg"
+      }
+    ]
+  }
+}
