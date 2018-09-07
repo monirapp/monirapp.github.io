@@ -6,84 +6,61 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script async src="http://story.monir.media/v0.js"></script>
-    <script async custom-element="amp-video"
-            src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-    <script async custom-element="amp-story"
-            src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script>
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async="" src="https://cdn.ampproject.org/v0.js"></script>
+    <script async="" src="https://cdn.ampproject.org/v0/amp-video-0.1.js" custom-element="amp-video"></script>
+    <script async="" src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story"></script>
+    <script async="" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js" custom-element="amp-analytics"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
-    <link href='style.css' rel='stylesheet' type='text/css'>
     <style>
         amp-story-page{
             background-color: white;
         }
     </style>
+    /Users/user/AMPFork/amphtml/extensions/amp-story/1.0/amp-story.js
 </head>
 <body>
 <amp-story standalone bookend-config-src="https://story.monir.media//davidbowiebookend.json" background-audio="https://story.monir.media/images/dbowie.mp3">
 
     <amp-story-page id="slide_0">
         <amp-story-grid-layer template="fill" >
-            <amp-video src="https://story.monir.media/images/db1.mp4"
-                       width="720" height="1280"
-                       layout="responsive">
-            </amp-video>
-        </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P0"
-                    }
-                }
+            <div id="test">
+                <amp-video src="https://story.monir.media/images/db1.mp4"
+                           width="720" height="1280"
+                           layout="responsive">
+                </amp-video>
+            </div>
+            <script>
+                pagecheck("test");
             </script>
-        </amp-analytics>
+        </amp-story-grid-layer>
 
     </amp-story-page>
 
     <amp-story-page id="slide_1">
-
-        <amp-story-grid-layer template="fill">
-            <amp-video src="https://story.monir.media/images/db2.mp4"
-                       width="720" height="1280"
-                       layout="responsive">
-            </amp-video>
-        </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P1"
-                    }
-                }
-            </script>
-        </amp-analytics>
+        <div id="page1">
+            <amp-story-grid-layer template="fill">
+                <amp-video src="https://story.monir.media/images/db2.mp4"
+                           width="720" height="1280"
+                           layout="responsive">
+                </amp-video>
+            </amp-story-grid-layer>
+        </div>
+        <script>
+            pagecheck("page1");
+        </script>
     </amp-story-page>
 
     <amp-story-page id="slide_2">
-
-        <amp-story-grid-layer template="fill">
-
-            <amp-video src="https://story.monir.media/images/db3.mp4"
-                       width="720" height="1280"
-                       layout="responsive">
-            </amp-video>
-        </amp-story-grid-layer>
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P2"
-                    }
-                }
-            </script>
-        </amp-analytics>
+            <amp-story-grid-layer template="fill">
+                <div id="s2">
+                    <amp-video src="https://story.monir.media/images/db3.mp4"
+                               width="720" height="1280"
+                               layout="responsive">
+                    </amp-video>
+                </div>
+            </amp-story-grid-layer>
+        <script>
+        </script>
     </amp-story-page>
 
 
@@ -96,18 +73,8 @@
                        layout="responsive">
             </amp-video>
         </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P3"
-                    }
-                }
-            </script>
-        </amp-analytics>
-
+        <script>
+        </script>
     </amp-story-page>
 
     <amp-story-page id="slide_4">
@@ -118,18 +85,8 @@
                        layout="responsive">
             </amp-video>
         </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P4"
-                    }
-                }
-            </script>
-        </amp-analytics>
-
+        <script>
+        </script>
     </amp-story-page>
 
     <amp-story-page id="slide_5">
@@ -141,18 +98,6 @@
                        layout="responsive">
             </amp-video>
         </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P5"
-                    }
-                }
-            </script>
-        </amp-analytics>
-
     </amp-story-page>
 
     <amp-story-page id="slide_6">
@@ -164,18 +109,6 @@
                        layout="responsive">
             </amp-video>
         </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P6"
-                    }
-                }
-            </script>
-        </amp-analytics>
-
     </amp-story-page>
 
     <amp-story-page id="slide_7">
@@ -188,63 +121,16 @@
                        layout="responsive">
             </amp-video>
         </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P7"
-                    }
-                }
-            </script>
-        </amp-analytics>
-
     </amp-story-page>
 
     <amp-story-page id="slide_8">
-
         <amp-story-grid-layer template="fill" >
-
             <amp-video src="https://story.monir.media/images/db9.mp4"
                        width="720" height="1280"
                        layout="responsive">
             </amp-video>
         </amp-story-grid-layer>
-
-        <amp-analytics type="segment">
-            <script type="application/json">
-                {
-                    "vars": {
-                        "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                        "name": "P8"
-                    }
-                }
-            </script>
-        </amp-analytics>
     </amp-story-page>
-
-    <amp-analytics type="segment">
-        <script type="application/json">
-            {
-                "vars": {
-                    "writeKey": "xoLciWRqdVKqvWX1OKYrzD9PyopsOhnM",
-                    "name":"test"
-                },
-                "triggers": {
-                    "trackPageview": {
-                        "on": "story-page-visible",
-                        "request": "pageview",
-                        "extraUrlParams": {
-                            "cd1": "STORY_PAGE_INDEX",
-                            "cd2": "STORY_PAGE_ID",
-                            "cd3": "13"
-                        }
-                    }
-                }
-            }
-        </script>
-    </amp-analytics>
 </amp-story>
 </body>
 </html>
