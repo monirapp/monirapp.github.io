@@ -1,4 +1,4 @@
-(self.AMP=self.AMP||[]).push({n:"amp-next-page",v:"1537222846916",f:(function(AMP,_){
+(self.AMP=self.AMP||[]).push({n:"amp-next-page",v:"1537224222059",f:(function(AMP,_){
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -16525,7 +16525,7 @@ var ModeDef = exports.ModeDef = void 0;
  * limitations under the License.
  */
 
-var version = '1537222846916';
+var version = '1537224222059';
 
 /**
  * `rtvVersion` is the prefixed version we serve off of the cdn.
@@ -16620,10 +16620,10 @@ function getRtvVersion(win, isLocalDev) {
     return win.AMP_CONFIG.v;
   }
 
-  // Currently `1537222846916` and thus `mode.version` contain only
+  // Currently `1537224222059` and thus `mode.version` contain only
   // major version. The full version however must also carry the minor version.
   // We will default to production default `01` minor version for now.
-  // TODO(erwinmombay): decide whether 1537222846916 should contain
+  // TODO(erwinmombay): decide whether 1537224222059 should contain
   // minor version.
   return '01' + version;
 }
@@ -19740,7 +19740,7 @@ function maybeLoadCorrectVersion(win, fnOrStruct) {
   // This is non-obvious, but we only care about the release version,
   // not about the full rtv version, because these only differ
   // in the config that is fully determined by the primary binary.
-  if ('1537222846916' == version) {
+  if ('1537224222059' == version) {
     return false;
   }
   // The :not is an extra prevention of recursion because it will be
@@ -36644,7 +36644,7 @@ var GlobalVariableSource = exports.GlobalVariableSource = function (_VariableSou
 
       // returns the AMP version number
       this.set('AMP_VERSION', function () {
-        return '1537222846916';
+        return '1537224222059';
       });
 
       this.set('BACKGROUND_STATE', function () {

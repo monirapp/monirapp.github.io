@@ -1,4 +1,4 @@
-(self.AMP=self.AMP||[]).push({n:"amp-analytics",v:"1537222846916",f:(function(AMP,_){
+(self.AMP=self.AMP||[]).push({n:"amp-analytics",v:"1537224222059",f:(function(AMP,_){
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -3870,7 +3870,7 @@ function getIframeTransportScriptUrl(ampWin, opt_forceProdUrl) {
     var loc = ampWin.parent.location;
     return loc.protocol + '//' + loc.host + '/dist/iframe-transport-client-lib.js';
   }
-  return _config.urls.thirdParty + '/1537222846916/iframe-transport-client-v0.js';
+  return _config.urls.thirdParty + '/1537224222059/iframe-transport-client-v0.js';
 }
 
 /**
@@ -16957,7 +16957,7 @@ var ModeDef = exports.ModeDef = void 0;
  * limitations under the License.
  */
 
-var version = '1537222846916';
+var version = '1537224222059';
 
 /**
  * `rtvVersion` is the prefixed version we serve off of the cdn.
@@ -17052,10 +17052,10 @@ function getRtvVersion(win, isLocalDev) {
     return win.AMP_CONFIG.v;
   }
 
-  // Currently `1537222846916` and thus `mode.version` contain only
+  // Currently `1537224222059` and thus `mode.version` contain only
   // major version. The full version however must also carry the minor version.
   // We will default to production default `01` minor version for now.
-  // TODO(erwinmombay): decide whether 1537222846916 should contain
+  // TODO(erwinmombay): decide whether 1537224222059 should contain
   // minor version.
   return '01' + version;
 }

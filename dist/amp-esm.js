@@ -2842,9 +2842,9 @@ try {
 // tag to give some information that can be used in error reports.
 // (At least by sophisticated users).
 if (self.console) {
-  (console.info || console.log).call(console, 'Powered by AMP ⚡ HTML – Version 1537222846916', self.location.href);
+  (console.info || console.log).call(console, 'Powered by AMP ⚡ HTML – Version 1537224222059', self.location.href);
 }
-self.document.documentElement.setAttribute('amp-version', '1537222846916');
+self.document.documentElement.setAttribute('amp-version', '1537224222059');
 
 },{"../build/css":1,"./chunk":14,"./error":25,"./font-stylesheet-timeout":32,"./impression":37,"./polyfills":51,"./pull-to-refresh":60,"./runtime":62,"./service/ampdoc-impl":65,"./service/custom-element-registry":71,"./service/performance-impl":82,"./service/platform-impl":83,"./services":104,"./style-installer":109,"./validator-integration":129}],11:[function(require,module,exports){
 Object.defineProperty(exports, "__esModule", {
@@ -15838,7 +15838,7 @@ var ModeDef = exports.ModeDef = void 0;
  * limitations under the License.
  */
 
-var version = '1537222846916';
+var version = '1537224222059';
 
 /**
  * `rtvVersion` is the prefixed version we serve off of the cdn.
@@ -15933,10 +15933,10 @@ function getRtvVersion(win, isLocalDev) {
     return win.AMP_CONFIG.v;
   }
 
-  // Currently `1537222846916` and thus `mode.version` contain only
+  // Currently `1537224222059` and thus `mode.version` contain only
   // major version. The full version however must also carry the minor version.
   // We will default to production default `01` minor version for now.
-  // TODO(erwinmombay): decide whether 1537222846916 should contain
+  // TODO(erwinmombay): decide whether 1537224222059 should contain
   // minor version.
   return '01' + version;
 }
@@ -19237,7 +19237,7 @@ function maybeLoadCorrectVersion(win, fnOrStruct) {
   // This is non-obvious, but we only care about the release version,
   // not about the full rtv version, because these only differ
   // in the config that is fully determined by the primary binary.
-  if ('1537222846916' == version) {
+  if ('1537224222059' == version) {
     return false;
   }
   // The :not is an extra prevention of recursion because it will be
@@ -37068,7 +37068,7 @@ var GlobalVariableSource = exports.GlobalVariableSource = function (_VariableSou
 
       // returns the AMP version number
       this.set('AMP_VERSION', function () {
-        return '1537222846916';
+        return '1537224222059';
       });
 
       this.set('BACKGROUND_STATE', function () {

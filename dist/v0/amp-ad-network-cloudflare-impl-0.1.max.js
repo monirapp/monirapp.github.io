@@ -1,4 +1,4 @@
-(self.AMP=self.AMP||[]).push({n:"amp-ad-network-cloudflare-impl",v:"1537222846916",f:(function(AMP,_){
+(self.AMP=self.AMP||[]).push({n:"amp-ad-network-cloudflare-impl",v:"1537224222059",f:(function(AMP,_){
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -1574,7 +1574,7 @@ function googlePageParameters(a4a, startTime) {
     var visibilityState = _services.Services.viewerForDoc(ampDoc).getVisibilityState();
     return {
       'is_amp': a4a.isXhrAllowed() ? AmpAdImplementation.AMP_AD_XHR_TO_IFRAME_OR_AMP : AmpAdImplementation.AMP_AD_IFRAME_GET,
-      'amp_v': '1537222846916',
+      'amp_v': '1537224222059',
       'd_imp': '1',
       'c': getCorrelator(win, ampDoc, clientId),
       'ga_cid': win.gaGlobal.cid || null,
@@ -1981,7 +1981,7 @@ function addCsiSignalsToAmpAnalyticsConfig(win, element, config, qqid, isVerifie
   var adType = element.getAttribute('type');
   var initTime = Number((0, _variableSource.getTimingDataSync)(win, 'navigationStart') || Date.now());
   var deltaTime = Math.round(win.performance && win.performance.now ? win.performance.now() : Date.now() - initTime);
-  var baseCsiUrl = 'https://csi.gstatic.com/csi?s=a4a' + ('&c=' + correlator + '&slotId=' + slotId + '&qqid.' + slotId + '=' + qqid) + ('&dt=' + initTime) + (eids != 'null' ? '&e.' + slotId + '=' + eids : '') + ('&rls=1537222846916&adt.' + slotId + '=' + adType);
+  var baseCsiUrl = 'https://csi.gstatic.com/csi?s=a4a' + ('&c=' + correlator + '&slotId=' + slotId + '&qqid.' + slotId + '=' + qqid) + ('&dt=' + initTime) + (eids != 'null' ? '&e.' + slotId + '=' + eids : '') + ('&rls=1537224222059&adt.' + slotId + '=' + adType);
   var isAmpSuffix = isVerifiedAmpCreative ? 'Friendly' : 'CrossDomain';
   config['triggers']['continuousVisibleIniLoad'] = {
     'on': 'ini-load',
@@ -7414,7 +7414,7 @@ function preloadBootstrap(win, preconnect, opt_type, opt_disallowCustom) {
 
   // While the URL may point to a custom domain, this URL will always be
   // fetched by it.
-  var scriptUrl = (0, _mode.getMode)().localDev ? getAdsLocalhost(win) + '/dist.3p/current/integration.js' : _config.urls.thirdParty + '/1537222846916/f.js';
+  var scriptUrl = (0, _mode.getMode)().localDev ? getAdsLocalhost(win) + '/dist.3p/current/integration.js' : _config.urls.thirdParty + '/1537224222059/f.js';
   preconnect.preload(scriptUrl, 'script');
 }
 
@@ -7461,11 +7461,11 @@ function resetBootstrapBaseUrlForTesting(win) {
 function getDefaultBootstrapBaseUrl(parentWindow, opt_srcFileBasename) {
   var srcFileBasename = opt_srcFileBasename || 'frame';
   if ((0, _mode.getMode)().localDev || (0, _mode.getMode)().test) {
-    return overrideBootstrapBaseUrl || getAdsLocalhost(parentWindow) + '/dist.3p/' + ((0, _mode.getMode)().minified ? '1537222846916/' + srcFileBasename : 'current/' + srcFileBasename + '.max') + '.html';
+    return overrideBootstrapBaseUrl || getAdsLocalhost(parentWindow) + '/dist.3p/' + ((0, _mode.getMode)().minified ? '1537224222059/' + srcFileBasename : 'current/' + srcFileBasename + '.max') + '.html';
   }
   // Ensure same sub-domain is used despite potentially different file.
   parentWindow.defaultBootstrapSubDomain = parentWindow.defaultBootstrapSubDomain || getSubDomain(parentWindow);
-  return 'https://' + parentWindow.defaultBootstrapSubDomain + ('.' + _config.urls.thirdPartyFrameHost + '/1537222846916/') + (srcFileBasename + '.html');
+  return 'https://' + parentWindow.defaultBootstrapSubDomain + ('.' + _config.urls.thirdPartyFrameHost + '/1537224222059/') + (srcFileBasename + '.html');
 }
 
 /**
@@ -7536,7 +7536,7 @@ function getCustomBootstrapBaseUrl(parentWindow, opt_strictForUnitTest, opt_type
   // redirect to the proxy origin which is the important one.
   var parsed = (0, _url.parseUrlDeprecated)(url);
   (0, _log.user)().assert(parsed.hostname == 'localhost' && !opt_strictForUnitTest || parsed.origin != (0, _url.parseUrlDeprecated)(parentWindow.location.href).origin, '3p iframe url must not be on the same origin as the current document ' + '%s (%s) in element %s. See https://github.com/ampproject/amphtml' + '/blob/master/spec/amp-iframe-origin-policy.md for details.', url, parsed.origin, meta);
-  return url + '?1537222846916';
+  return url + '?1537224222059';
 }
 
 /**
@@ -11906,8 +11906,8 @@ function getContextMetadata(parentWindow, element, sentinel, attributes) {
   // AmpContext are not part of this object.
   var layoutRect = element.getPageLayoutBox();
   attributes['_context'] = (0, _object.dict)({
-    'ampcontextVersion': '1537222846916',
-    'ampcontextFilepath': _config.urls.thirdParty + '/1537222846916' + '/ampcontext-v0.js',
+    'ampcontextVersion': '1537224222059',
+    'ampcontextFilepath': _config.urls.thirdParty + '/1537224222059' + '/ampcontext-v0.js',
     'sourceUrl': docInfo.sourceUrl,
     'referrer': referrer,
     'canonicalUrl': docInfo.canonicalUrl,
@@ -14038,7 +14038,7 @@ var ModeDef = exports.ModeDef = void 0;
  * limitations under the License.
  */
 
-var version = '1537222846916';
+var version = '1537224222059';
 
 /**
  * `rtvVersion` is the prefixed version we serve off of the cdn.
@@ -14133,10 +14133,10 @@ function getRtvVersion(win, isLocalDev) {
     return win.AMP_CONFIG.v;
   }
 
-  // Currently `1537222846916` and thus `mode.version` contain only
+  // Currently `1537224222059` and thus `mode.version` contain only
   // major version. The full version however must also carry the minor version.
   // We will default to production default `01` minor version for now.
-  // TODO(erwinmombay): decide whether 1537222846916 should contain
+  // TODO(erwinmombay): decide whether 1537224222059 should contain
   // minor version.
   return '01' + version;
 }
@@ -17242,7 +17242,7 @@ var GlobalVariableSource = exports.GlobalVariableSource = function (_VariableSou
 
       // returns the AMP version number
       this.set('AMP_VERSION', function () {
-        return '1537222846916';
+        return '1537224222059';
       });
 
       this.set('BACKGROUND_STATE', function () {
