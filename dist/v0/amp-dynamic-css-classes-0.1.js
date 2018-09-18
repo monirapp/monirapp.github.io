@@ -1,0 +1,8 @@
+(self.AMP=self.AMP||[]).push({n:"amp-dynamic-css-classes",v:"0",f:(function(AMP,_){
+self.log=self.log||{user:null,dev:null,userForEmbed:null};function d(a,b){a=a.__AMP_TOP||a;return e(a,b)}function f(a,b){a=g(a);a=g(a);a=a.isSingleDoc()?a.win:a;return e(a,b)}function g(a){return a.nodeType?d((a.ownerDocument||a).defaultView,"ampdoc").getAmpDoc(a):a}function e(a,b){h(a,b);var c=a.services;c||(c=a.services={});var n=c;a=n[b];a.obj||(a.obj=new a.ctor(a.context),a.ctor=null,a.context=null,a.resolve&&a.resolve(a.obj));return a.obj}function h(a,b){a=a.services&&a.services[b];return!(!a||!a.ctor&&!a.obj)};/*
+ https://mths.be/cssescape v1.5.1 by @mathias | MIT license */
+function k(a){var b=a.split("."),c="";return b.reduceRight(function(a,b){c&&(b+="."+c);c=b;a.push(b);return a},[])}function l(a){var b;if(b=f(a,"viewer").getUnconfirmedReferrerUrl()){var c;b:{if(a.nodeType&&(c=(a.ownerDocument||a).defaultView,c=c!=(c.__AMP_TOP||c)&&h(c,"url")?e(c,"url"):null))break b;c=f(a,"url")}b=c.parse(b).hostname}else b="";return"t.co"===b?k("twitter.com"):!b&&/Pinterest/.test(a.win.navigator.userAgent)?k("www.pinterest.com"):k(b)}
+function m(a,b){a.isBodyAvailable()?p(a.getBody(),b):a.whenBodyAvailable().then(function(a){return p(a,b)})}function p(a,b){var c=a.classList;for(a=0;a<b.length;a++)c.add(b[a])}function q(a){var b=l(a).map(function(a){return"amp-referrer-"+a.replace(/\./g,"-")});d(a.win,"vsync").mutate(function(){m(a,b)})}function r(a){var b=f(a,"viewer");b.isEmbedded()&&d(a.win,"vsync").mutate(function(){m(a,["amp-viewer"])})}(function(a){a.registerServiceForDoc("amp-dynamic-css-classes",function(a){q(a);r(a);return{}})})(self.AMP);
+})});
+//# sourceMappingURL=amp-dynamic-css-classes-0.1.js.map
+
