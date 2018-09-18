@@ -1,0 +1,7 @@
+(self.AMP=self.AMP||[]).push({n:"amp-vine",v:"0",f:(function(AMP,_){
+function c(a,b){function e(){}e.prototype=b.prototype;a.prototype=new e;a.prototype.constructor=a;for(var d in b)if(Object.defineProperties){var f=Object.getOwnPropertyDescriptor(b,d);f&&Object.defineProperty(a,d,f)}else a[d]=b[d]};self.log=self.log||{user:null,dev:null,userForEmbed:null};var g=self.log;function h(a){a=AMP.BaseElement.call(this,a)||this;a.c=null;return a}c(h,AMP.BaseElement);h.prototype.preconnectCallback=function(a){this.preconnect.url("https://vine.co",a);this.preconnect.url("https://v.cdn.vine.co",a)};h.prototype.isLayoutSupported=function(a){return"fixed"==a||"fixed-height"==a||"responsive"==a||"fill"==a||"flex-item"==a||"fluid"==a||"intrinsic"==a};
+h.prototype.layoutCallback=function(){if(!g.user)throw Error("failed to call initLogConstructor");var a=g.user.assert(this.element.getAttribute("data-vineid"),"The data-vineid attribute is required for <amp-vine> %s",this.element),b=this.element.ownerDocument.createElement("iframe");b.setAttribute("frameborder","0");b.src="https://vine.co/v/"+encodeURIComponent(a)+"/embed/simple";this.applyFillContent(b);this.element.appendChild(b);this.c=b;return this.loadPromise(b)};
+h.prototype.pauseCallback=function(){this.c&&this.c.contentWindow&&this.c.contentWindow.postMessage("pause","*")};(function(a){a.registerElement("amp-vine",h)})(self.AMP);
+})});
+//# sourceMappingURL=amp-vine-0.1.js.map
+
